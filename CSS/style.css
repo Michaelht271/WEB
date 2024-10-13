@@ -1,0 +1,143 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #090909;
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #5dda58;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    font-size: 1em;
+    background-color: #575757;
+    color: #fff;
+}
+
+/* Head content styling */
+.headcontent {
+    padding-top: 60px;
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+}
+
+.headcontent h1 {
+    font-size: 2.5em;
+    color: #3b52e7;
+}
+
+.headcontent p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* Main content */
+.content {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    background: #b4f7b1;
+    color: rgb(253, 5, 5);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Gallery styling */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding : 20px;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+    padding: 60px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #5dda58;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #4a9c4e;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .social-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-link:hover {
+    text-decoration: underline;
+}
