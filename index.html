@@ -3,59 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael's Page</title>
-    <link rel="stylesheet" href="/WEB /CSS/style.css">
+    <title>Michael's Page - Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <!-- Menu container -->
+    <a href="#mainContent" class="skip-link">Skip to Main Content</a>
+    
     <header class="navbar">
-        <a href="home.html">Home</a>
-        <a href="IT.html">Information Technology</a>
-        <a href="Aboutus.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="IT.html">Information Technology</a>
+            <a href="Aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
     <div class="headcontent">
         <h1>Welcome to My Website</h1>
-        <p>My name is Michael and this is my personal website where I showcase my projects, share my thoughts, and provide information about my services.</p>
+        <p>My name is Michael, and this is my personal website where I showcase my projects, share my thoughts, and provide information about my services.</p>
     </div>
 
-    <div class="content">
-        <h2>Services</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Mobile App Development</li>
-            <li>SEO Optimization</li>
-            <li>Consulting Services</li>
-        </ul>
+    <main id="mainContent">
+        <div class="content">
+            <h2>Services</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Mobile App Development</li>
+                <li>SEO Optimization</li>
+                <li>Consulting Services</li>
+            </ul>
 
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="/WEB /Image/Untitled.jpeg" alt="Web Development Image">
-            <img src="/WEB /Image/App.jpeg" alt="Mobile App Development Image">
-            <img src="/WEB /Image/SEO.jpeg" alt="SEO Optimization Image">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="Image/Untitled.jpeg" alt="Web Development" loading="lazy">
+                <img src="Image/App.jpeg" alt="Mobile App Development" loading="lazy">
+                <img src="Image/SEO.jpeg" alt="SEO Optimization" loading="lazy">
+                <img src="Image/4.jpeg" alt="Consulting Services" loading="lazy">
+                <img src="Image/ProjectShowcase.png" alt="Project Showcase" loading="lazy">
+            </div>
+
+            <h2>Contact Me</h2>
+            <form action="/submit_form" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-
-        <h2>Contact Me</h2>
-        <form action="/submit_form" method="POST">
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2024 Michael Nguyen. All rights reserved.</p>
-        <a href="#" class="social-link">Facebook</a>
-        <a href="#" class="social-link">Twitter</a>
-        <a href="#" class="social-link">Instagram</a>
+        <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
     </footer>
 </body>
 </html>
