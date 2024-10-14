@@ -1,143 +1,172 @@
-/* Reset margin and padding */
+/* General Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Body style */
+/* Body and Typography */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #090909;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color for readability */
 }
 
-/* Navbar styling */
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    left: -9999px; /* Hidden until focused */
+}
+
+.skip-link:focus {
+    left: 10px; /* Visible when focused */
+}
+
+/* Navigation Bar */
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+    background-color: #007bff; /* Blue background color */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar a {
-    float: left;
-    display: block;
-    color: #5dda58;
-    text-align: center;
-    padding: 14px 20px;
+    color: white; /* White text color */
+    padding: 12px 20px; /* Increased padding for better spacing */
     text-decoration: none;
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background 0.3s, transform 0.3s; /* Added transition for transform */
 }
 
 .navbar a:hover {
-    font-size: 1em;
-    background-color: #575757;
-    color: #fff;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-/* Head content styling */
+/* Header Content */
 .headcontent {
-    padding-top: 60px;
     text-align: center;
-    background-color: #fff;
-    padding: 50px;
+    padding: 40px; /* Increased padding */
+    background-color: #e9ecef; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px; /* Margin around header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.headcontent h1 {
-    font-size: 2.5em;
-    color: #3b52e7;
-}
-
-.headcontent p {
-    font-size: 1.2em;
-    color: #777;
-}
-
-/* Main content */
+/* Main Content */
 .content {
     padding: 20px;
-    background-color: #fff;
 }
 
-.content h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+/* Section Headings */
+h1 {
+    color: #ff5733; /* Color for the main heading */
 }
 
-.content ul {
-    list-style-type: none;
-    padding: 0;
+h2 {
+    color: #007bff; /* Blue for secondary headings */
+    border-bottom: 2px solid #ffffff; /* Underline effect */
+    padding-bottom: 5px;
+    margin-top: 20px;
 }
 
-.content ul li {
-    background: #b4f7b1;
-    color: rgb(253, 5, 5);
+/* Paragraphs */
+p {
+    color: #555; /* Grey for paragraph text */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    background-color: #7dded1; /* Blue background for list items */
+    color: rgb(0, 0, 0); /* White text color */
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    margin: 5px 0; /* Space between items */
+    border-radius: 5px; /* Rounded corners for list items */
 }
 
-/* Gallery styling */
+/* Gallery Styles */
 .gallery {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    padding : 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between images */
+    margin: 20px 0; /* Vertical spacing */
 }
 
 .gallery img {
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width of grid cell */
+    border: 5px solid #007bff; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Inner padding */
+    transition: transform 0.3s; /* Animation for hover effect */
 }
 
-/* Form styling */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Form Styles */
 form {
-    margin-top: 20px;
-    padding: 60px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e9ecef; /* Form background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+label {
+    font-weight: bold; /* Bold labels */
 }
 
-button[type="submit"] {
-    background-color: #5dda58;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Inner padding */
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
 }
 
-button[type="submit"]:hover {
-    background-color: #4a9c4e;
+button {
+    background-color: #007bff; /* Blue button */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background 0.3s, transform 0.3s; /* Transition effects */
 }
 
-/* Footer styling */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
+    background-color: #007bff; /* Blue background for footer */
+    color: white; /* White text in footer */
 }
 
-footer .social-link {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+.social-links {
+    margin-top: 10px; /* Space above social links */
 }
 
-footer .social-link:hover {
-    text-decoration: underline;
+.social-link {
+    color: white; /* White links */
+    padding: 5px 10px; /* Padding for links */
+    text-decoration: none; /* No underline */
+}
+
+.social-link:hover {
+    text-decoration: underline; /* Underline on hover */
 }
