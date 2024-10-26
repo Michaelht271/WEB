@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael's Page - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /* Inline CSS for demonstration purposes */
+        #image {
+            width: 300px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            background-color: #f0f0f0; /* Default background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <a href="#mainContent" class="skip-link">Skip to Main Content</a>
@@ -35,11 +49,15 @@
 
             <h2>Gallery</h2>
             <div class="gallery">
-                <img src="Image/Untitled.jpeg" alt="Web Development" loading="lazy">
-                <img src="Image/App.jpeg" alt="Mobile App Development" loading="lazy">
-                <img src="Image/SEO.jpeg" alt="SEO Optimization" loading="lazy">
-                <img src="Image/4.jpeg" alt="Consulting Services" loading="lazy">
-                <img src="Image/ProjectShowcase.png" alt="Project Showcase" loading="lazy">
+                <img src="Image/Untitled.jpeg" alt="Web Development" loading="lazy" onmouseover="upDate(this)" onmouseout="undo()">
+                <img src="Image/App.jpeg" alt="Mobile App Development" loading="lazy" onmouseover="upDate(this)" onmouseout="undo()">
+                <img src="Image/SEO.jpeg" alt="SEO Optimization" loading="lazy" onmouseover="upDate(this)" onmouseout="undo()">
+                <img src="Image/4.jpeg" alt="Consulting Services" loading="lazy" onmouseover="upDate(this)" onmouseout="undo()">
+                <img src="Image/ProjectShowcase.png" alt="Project Showcase" loading="lazy" onmouseover="upDate(this)" onmouseout="undo()">
+            </div>
+
+            <div id="image">
+                Hover over an image below to display here.
             </div>
 
             <h2>Contact Me</h2>
@@ -66,5 +84,28 @@
             <a href="#" class="social-link">Instagram</a>
         </div>
     </footer>
+
+    <script>
+        // JavaScript function to update the image and text
+        function upDate(previewPic) {
+            // Log event for debugging
+            console.log("Event Triggered");
+            console.log("Alt: " + previewPic.alt);
+            console.log("Source: " + previewPic.src);
+
+            // Change text of the div with id 'image'
+            document.getElementById("image").innerHTML = previewPic.alt;
+
+            // Change the background image of the div with id 'image'
+            document.getElementById("image").style.backgroundImage = "url('" + previewPic.src + "')";
+        }
+
+        // JavaScript function to undo the changes
+        function undo() {
+            // Reset the background image and text
+            document.getElementById("image").style.backgroundImage = "url('')";
+            document.getElementById("image").innerHTML = "Hover over an image below to display here.";
+        }
+    </script>
 </body>
 </html>
